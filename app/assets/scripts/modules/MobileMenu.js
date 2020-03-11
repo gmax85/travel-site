@@ -6,7 +6,7 @@ class MobileMenu {
     this.events();
   }
   events() {
-    this.menuIcon.addEventListener("click", () => this.toggleTheMenu());
+    this.menuIcon.addEventListener("click", this.toggleTheMenu.bind(this));
   }
   toggleTheMenu() {
     this.menuContent.classList.toggle("site-header__menu-content--is-visible");
